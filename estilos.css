@@ -1,1 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@600&family=Playfair+Display:wght@800&family=Space+Grotesk:wght@500&display=swap');
+
+body, label, input, button{
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 13px;
+}
+
+input, button {
+  border-radius: 10px; 
+  padding: 10px; 
+  border: 1px solid #ccc;
+}
+
+input {
+  margin-top: 5px;
+  margin-bottom: 40px;
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+}
+
+form {
+  width: 400px;
+  margin: 0 auto;
+  background-size: 500px;
+  background-repeat: no-repeat;
+  position:fixed;
+  top: 180px;
+  left: 870px;
+}
+
+#image{
+  width: 500px;
+  height: 900px;
+  background-image: url("images/bg-main-desktop.png");
+  background-size: 600px;
+  background-repeat: no-repeat;
+  position:fixed;
+  top: 0px;
+  left: 0px;
+}
+
+#card_front{
+  width: 447px;
+  height: 245px;
+  background-image: url("images/bg-card-front.png");
+  background-size: 400px;
+  background-repeat: no-repeat;
+  position:absolute;
+  top: 135px;
+  left: 230px;
+}
+
+#card_back{
+  width: 447px;
+  height: 245px;
+  background-image: url("images/bg-card-back.png");
+  background-size: 400px;
+  background-repeat: no-repeat;
+  position:absolute;
+  top: 375px;
+  left: 320px;
+}
+
+#date {
+  width: 150px;
+  display: inline-block;
+  margin-bottom: 10px;
+}
+
+#same_line{
+  margin-top: 10px;
+  margin-bottom: 20px;
+  width: 30%;
+  padding: 10px;
+  border: 1px solid #ccc;
+}
+
+#cvv{
+  height: 100%;
+  width: 118%;
+  padding: 10px;
+}
+
+button {
+  height: 100%;
+  width: 106%;
+  padding: 10px;
+  background-color: hsl(278, 100%, 11%);
+  color: #fff;
+  border: none;
+}
 
