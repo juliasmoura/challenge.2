@@ -32,7 +32,7 @@ form {
 #image{
   width: 500px;
   height: 900px;
-  background-image: url("images/bg-main-desktop.png");
+  background-image: url("bg-main-desktop.png");
   background-size: 600px;
   background-repeat: no-repeat;
   position:fixed;
@@ -43,7 +43,7 @@ form {
 #card_front{
   width: 447px;
   height: 245px;
-  background-image: url("images/bg-card-front.png");
+  background-image: url("bg-card-front.png");
   background-size: 400px;
   background-repeat: no-repeat;
   position:absolute;
@@ -54,7 +54,7 @@ form {
 #card_back{
   width: 447px;
   height: 245px;
-  background-image: url("images/bg-card-back.png");
+  background-image: url("bg-card-back.png");
   background-size: 400px;
   background-repeat: no-repeat;
   position:absolute;
