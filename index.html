@@ -1,11 +1,53 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Interactive card details form</title>
+
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+    .inline {
+      float: left;
+      width: 45%; 
+      margin-right: 10px; 
+  }
+  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <div id="image"></div>
+  <div id="card_front"></div>
+  <div id="card_back"></div>
+  <form>
+    <label for="name">CARDHOLDER NAME</label>
+    <input type="text" id="name" placeholder="e.g. Jane Appleseed">
+    <br>
+    <label for="email">CARD NUMBER</label>
+    <input type="email" id="email" placeholder="e.g. 1234 5678 9123 0000">
+    <br>
+
+    <div class="inline">
+      <label for="date">EXP. DATE (MM/YY)</label>
+      <input type="month_" id="same_line" placeholder="MM">
+      <input type="year_" id="same_line" placeholder="YY">
+    </div>
+
+    <div class="inline"> 
+      <label for="cvv">CVV</label placeholder="e.g. 123">
+      <input type="number" id="cvv" placeholder="C  e.g. 123">
+    </div>
+
+    <br>
+
+    <button type="submit">Confirm</button>
+  </form>
+
     
+  </div>
 </body>
 </html>
