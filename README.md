@@ -18,5 +18,5 @@ O objetivo deste projeto é completar o desafio proposto pelo Frontend Mentor (h
 Para executar este projeto localmente ou fazer modificações, você precisa de um ambiente de desenvolvimento com suporte a HTML e CSS. Você pode clonar este repositório usando o seguinte comando:
 
 ```bash
-git clone https://github.com/juliasmoura/challenge.2/tree/main
+git clone https://github.com/juliasmoura/challenge.2
 
