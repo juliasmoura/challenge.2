@@ -23,22 +23,28 @@
   <div id="card_front"></div>
   <div id="card_back"></div>
   <form>
-    <label for="name">CARDHOLDER NAME</label>
-    <input type="text_" id="name" minlength="1" maxlength="25" placeholder="e.g. Jane Appleseed"><div id="output_name"></div>
+      <label for="name">CARDHOLDER NAME</label>
+      <input type="text_" id="name" minlength="1" maxlength="25" placeholder="e.g. Jane Appleseed" class="input required" oninput="cardHolderValidate(0)"><div id="output_name" ></div>
+      <span class="span required1"> Can't be blank</span>
     <br>
-    <label for="number">CARD NUMBER</label>
-    <input type="number_" id="number"  minlength="19" maxlength="19"placeholder="e.g. 1234 5678 9123 0000"><div id="output_number"></div>
+      <label for="number">CARD NUMBER</label>
+      <input type="number_" id="number"  minlength="19" maxlength="19"placeholder="e.g. 1234 5678 9123 0000" class="input required" oninput="cardHolderValidate(1)"><div id="output_number" ></div>
+      <span class="span required2"> Can't be blank</span>
     <br>
 
     <div class="inline">
       <label for="date">EXP. DATE (MM/YY)</label>
-      <input type="month_" id="same_line1"  maxlength="2" placeholder="MM" > <div id="output_line1"></div>
-      <input type="year_" id="same_line2"  maxlength="2" placeholder="YY"> <div id="output_line2"></div>
+      <input type="month_" id="same_line1"  maxlength="2" placeholder="MM" class="input required" oninput="cardHolderValidate(2)"> <div id="output_line1" ></div>
+      <span class="span required3"> Can't be blank</span>
+
+      <input type="year_" id="same_line2"  maxlength="2" placeholder="YY" class="input required" oninput="cardHolderValidate(3)"> <div id="output_line2"></div>
+      <span class="span required4"> Can't be blank</span>
     </div>
 
     <div class="inline"> 
       <label for="cvv">CVV</label>
-      <input type="number_" id="cvv" minlength="3" maxlength="3" placeholder="C  e.g. 123"><div id="output_cvv"></div>
+      <input type="number_" id="cvv" minlength="3" maxlength="3" placeholder="C  e.g. 123" class="input required" oninput="cardHolderValidate(4)"><div id="output_cvv"></div>
+      <span class="span required5"> Can't be blank</span>
     </div>
 
     <br>
@@ -54,6 +60,10 @@
   <script id="info-place">
     const name = document.getElementById('name');
     const output_name = document.getElementById('output_name');
+
+    const inputs = document.querySelectorAll('input');
+    const spans = document.querySelectorAll('span');
+
     name.addEventListener('input', () => {
       output_name.textContent = name.value;
   });
@@ -80,6 +90,26 @@
   cvv.addEventListener('input', () => {
     output_cvv.textContent = cvv.value;
 });
+
+    
+    function setError(index){ 
+      inputs[index].style.border = '2px solid hsl(0, 100%, 66%)';
+      spans[index].style.display = 'block';
+    }
+
+    function removeError(index){
+      inputs[index].style.border = '';
+      spans[index].style.display = 'none';
+    }
+
+    function cardHolderValidate(index){
+      if(inputs[index].value.length < 1){
+        setError(index);
+        }
+      else{
+        removeError(index);
+      }
+    }
   
   </script>
 

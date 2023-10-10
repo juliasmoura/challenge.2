@@ -19,6 +19,33 @@ input {
   border: 1px solid #ccc;
 }
 
+.span {
+  display: none;
+  color: hsl(0, 100%, 66%);
+  font-size: 10px;
+  position: absolute;
+  top: 0px;
+  left: 6px;
+}
+
+span.required1{
+  top:63px;
+}
+span.required2{
+  top:183px;
+}
+span.required3{
+  top:306px;
+}
+span.required4{
+  top:306px;
+  left: 80px;
+}
+span.required5{
+  top:306px;
+  left: 195px;
+}
+
 form {
   width: 400px;
   margin: 0 auto;
