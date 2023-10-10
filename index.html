@@ -22,7 +22,7 @@
   <div id="image"></div>
   <div id="card_front"></div>
   <div id="card_back"></div>
-  <form>
+  <form id="form">
       <label for="name">CARDHOLDER NAME</label>
       <input type="text_" id="name" minlength="1" maxlength="25" placeholder="e.g. Jane Appleseed" class="input required" oninput="cardHolderValidate(0)"><div id="output_name" ></div>
       <span class="span required1"> Can't be blank</span>
@@ -58,11 +58,22 @@
     
   </div>
   <script id="info-place">
+    const form = document.getElementById('form');
     const name = document.getElementById('name');
     const output_name = document.getElementById('output_name');
 
     const inputs = document.querySelectorAll('input');
     const spans = document.querySelectorAll('span');
+
+    form.addEventListener('submit', (event) =>{
+      event.preventDefault();
+      console.log('abcaa');
+      for(let i = 0; i < 5; i++){
+        cardHolderValidate(i);
+      }
+    });
+
+    
 
     name.addEventListener('input', () => {
       output_name.textContent = name.value;
